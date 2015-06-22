@@ -1,0 +1,17 @@
+Types of card effects in TS:
+scoring - gives VPs
+give VPs
+change defcon status
+random discard from SUPERPOWER hand (with modified event happenings)
+discard from SUPERPOWER hand (no events)
+the china card
+remove n total SUPERPOWER influence (with no more than m per country)
+remove all influence of SUPERPOWER from specific COUNTRY
+add n SUPERPOWER influence to specific COUNTRY
+remainder of turn: SUPERPOWER gets +n ops points to cards in SPECIFIC REGION
+unless (discard) with ops 3 or more, remove all SUPERPOWER influence from specific COUNTRY
+war cards (specific to war)
+add to SUPERPOWER MILITOPS track
+replace all SUPERPOWER influence with SUPERPOWER influence
+SUPERPOWER adds sufficient influence in specific COUNTRY for control
+add n SUPERPOWER influence to each of m non-OPPONENT controlled countries of REGION
