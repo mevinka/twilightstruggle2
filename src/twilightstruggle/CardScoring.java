@@ -12,6 +12,7 @@ public class CardScoring implements CardEffect {
 	}
 	
 	public void effect() {
-		
+		// TODO: need to access the static map of region objects
+		// in the board in the main game object
 	}
 }

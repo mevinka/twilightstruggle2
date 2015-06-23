@@ -106,7 +106,7 @@ public class Player {
 	}
 	
 	/**
-	 * Returns an array representing the cards in hand
+	 * Returns the cards in hand
 	 * @return Returns a stack of cards of type Types.Card, representing the player hand
 	 */
 	public Stack<Types.Card> cardsInHand() {

@@ -1,5 +1,11 @@
 package twilightstruggle;
 
+/**
+ * A small class that stores all the score data when scoring a region.
+ * 
+ * @author Kevin
+ */
+
 public class PrelimScore {
 	public int control;
 	public int battleground;

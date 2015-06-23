@@ -2,6 +2,11 @@ package twilightstruggle;
 
 import java.util.Stack;
 
+/**
+ * A class designating a REGION in twilight struggle, which is a collection
+ * of countries that constitute some geopolitical area of the world map.
+ * @author Kevin
+ */
 public class Region {
 	public final String name;
 	public final int presence;
@@ -10,6 +15,7 @@ public class Region {
 	public final Country[] countries;
 	public final int battlegrounds;
 	// need interface for scoring function
+	
 	
 	public Region(String name, int presence, int domination, int control, Stack<Country> countries) {
 		this.name = name;
