@@ -12,12 +12,16 @@ public class Board {
 	private int turn;
 	private Types.Superpower phasing;
 	
+	/**
+	 * Creates default board state for starting game
+	 */
 	public Board() {
 		setDefcon(1);
 		setVictoryPoints(0);
 		setTurn(0);
 	}
 
+	
 	public int getDefcon() {
 		return defcon;
 	}

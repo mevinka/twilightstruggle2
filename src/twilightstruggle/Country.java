@@ -15,7 +15,7 @@ public class Country {
 	public final String name;
 	private int stability;
 	private int[] influence;
-	public final Stack<Country> neighbors;
+	public final Stack<Country> neighbors; // TODO change this to Types.Country after making a types.country
 	
 	/**
 	 * Country constructor. Defaults influence in the country to zero.
