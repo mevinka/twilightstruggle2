@@ -10,6 +10,7 @@ public class Board {
 	private int defcon;
 	private int victoryPoints;
 	private int turn;
+	private Types.Superpower phasing;
 	
 	public Board() {
 		setDefcon(1);
@@ -39,5 +40,13 @@ public class Board {
 
 	public void setTurn(int turn) {
 		this.turn = turn;
+	}
+
+	public Types.Superpower getPhasing() {
+		return phasing;
+	}
+
+	public void setPhasing(Types.Superpower phasing) {
+		this.phasing = phasing;
 	}
 }

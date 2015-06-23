@@ -15,3 +15,18 @@ add to SUPERPOWER MILITOPS track
 replace all SUPERPOWER influence with SUPERPOWER influence
 SUPERPOWER adds sufficient influence in specific COUNTRY for control
 add n SUPERPOWER influence to each of m non-OPPONENT controlled countries of REGION
+
+-----
+Types:
+SCORE REGION r
+DEGRADE defcon n
+SUPERPOWER gains n VP
+SUPERPOWER RANDOM DISCARD card, IF OPPOSING, event happens, ELSE skip event
+THE CHINA CARD
+REMOVE n total SUPERPOWER INFLUENCE from any countries in REGION, max m per country
+EVENT CANNOT BE USED AFTER card c
+REMOVE ALL SUPERPOWER INFLUENCE from country
+SUPERPOWER gains CONTROL of country
+ADD n SUPERPOWER influence to COUNTRY
+GIVE SUPERPOWER +n OPS BONUS FOR TURN in REGION
+

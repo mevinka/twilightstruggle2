@@ -17,6 +17,7 @@ public class Card implements Comparable<Card> {
 	public final Types.WarPhase phase;
 	public final Types.Superpower powerType;
 	public final boolean discardable;
+	public final CardEffect[] effects;
 	// NEED effect type stack/array/whatever
 	
 	/**
@@ -30,7 +31,7 @@ public class Card implements Comparable<Card> {
 	 * @param discardable If the card is discarded after use, this value is TRUE. Otherwise, it is FALSE.
 	 */
 	public Card(String name, String description, Types.Card cardInt, int cost, 
-			Types.WarPhase phase, Types.Superpower power, boolean discardable) {
+			Types.WarPhase phase, Types.Superpower power, boolean discardable, CardEffect[] effects) {
 		this.name = name;
 		this.description = description;
 		this.cardInt = cardInt;
@@ -38,6 +39,7 @@ public class Card implements Comparable<Card> {
 		this.phase = phase;
 		this.powerType = power;
 		this.discardable = discardable;
+		this.effects = effects;
 	}
 	
 	@Override
@@ -59,5 +61,11 @@ public class Card implements Comparable<Card> {
 		}
 		
 		return 0;
+	}
+	
+	public void effect() {
+		for(int i = 0; i < this.effects.length; i++) {
+			this.effects[i].effect();
+		}
 	}
 }

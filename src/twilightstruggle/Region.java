@@ -33,50 +33,44 @@ public class Region {
 	 * @return an integer number of points to move the VP slider
 	 */
 	public int score() {
-		int usaControl = 0;
-		int ussrControl = 0;
-		int usaBattleground = 0;
-		int ussrBattleground = 0;
-		int usaTotal = 0; int ussrTotal = 0;
+		PrelimScore usaScore = getScore(Types.Superpower.USA);
+		PrelimScore ussrScore = getScore(Types.Superpower.USSR);
 		
-		for(int i = 0; i < this.countries.length; i++) {
-			if(this.countries[i].hasControl() == Types.Superpower.USA) {
-				usaControl++;
-				if(this.countries[i].battleground) {
-					usaBattleground++;
-				}
-			} else if(this.countries[i].hasControl() == Types.Superpower.USSR) {
-				ussrControl++;
-				if(this.countries[i].battleground) {
-					ussrBattleground++;
+		int total = 0;
+		
+		if(usaScore.control > 0) {
+			total += this.presence;
+			if(usaScore.hasNonBg) {
+				if(usaScore.control > ussrScore.control) {
+					if(usaScore.battleground == this.battlegrounds) {
+						total += this.control;
+					} else if(usaScore.battleground > ussrScore.battleground) {
+						total += this.domination;
+					}
 				}
 			}
 		}
 		
-		// Define presence as having any controlled countries
-		if(usaControl > 0) {
-			usaTotal = this.presence;
-		}
-		if(ussrControl > 0) {
-			ussrTotal = this.presence;
-		}
-		
-		if(usaControl > 0 || ussrControl > 0) {
-			if(usaBattleground > ussrBattleground) {
-				usaTotal = this.domination;
-			} else if(ussrBattleground > usaBattleground) {
-				ussrTotal = this.domination;
+		if(ussrScore.control > 0) {
+			total -= this.presence;
+			if(ussrScore.hasNonBg) {
+				if(ussrScore.control > usaScore.control) {
+					if(ussrScore.battleground == this.battlegrounds) {
+						total -= this.control;
+					} else if(ussrScore.battleground > usaScore.battleground) {
+						total -= this.domination;
+					}
+				}
 			}
 		}
 		
-		
+		return total;
 	}
 	
-	private int getScore(Types.Superpower power) {
+	private PrelimScore getScore(Types.Superpower power) {
 		int control = 0;
 		int battleground = 0;
 		boolean hasNonBg = false;
-		int finalTotal = 0;
 		
 		for(int i = 0; i < this.countries.length; i++) {
 			if(this.countries[i].hasControl() == power) {
@@ -89,12 +83,10 @@ public class Region {
 			}
 		}
 		
-		if(control > 0) {
-			finalTotal = this.presence;
-			if(hasNonBg) {
-				
-			}
-		}
+
+		PrelimScore result = new PrelimScore(control, battleground, hasNonBg);
+		return result;
+		
 	}
 	
 }
