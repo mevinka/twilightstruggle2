@@ -33,33 +33,33 @@ public class Country {
 	 * @return Returns the integer representation of the controlling country, with
 	 * -1 representing a neutral country.
 	 */
-	public Superpower hasControl() {
+	public Types.Superpower hasControl() {
 		int diff = influence[0] - influence[1];
 		if(diff >= this.stability) {
-			return Superpower.USA;					// USA has control
+			return Types.Superpower.USA;					// USA has control
 		} else if(-1*diff >= this.stability) {
-			return Superpower.USSR;					// USSR has control
+			return Types.Superpower.USSR;					// USSR has control
 		}
 		
-		return Superpower.NEUTRAL;					// Neutral; no controller
+		return Types.Superpower.NEUTRAL;					// Neutral; no controller
 	}
 	
 	/**
-	 * Increases a superpower's influence in the country. If the country is
-	 * controlled by the opposing superpower, then each increase in influence
+	 * Increases a Types.Superpower's influence in the country. If the country is
+	 * controlled by the opposing Types.Superpower, then each increase in influence
 	 * costs an extra point until control is lost.
-	 * @param player representation of the superpower increasing influence
+	 * @param player representation of the Types.Superpower increasing influence
 	 * @param value number of points being spent.
 	 */
-	public void increaseInfluence(Superpower player, int value) {
+	public void increaseInfluence(Types.Superpower player, int value) {
 		int diff = influence[0] - influence[1];
 		
 		/* if the opponent does not control the country */
-		if(this.hasControl() == player || this.hasControl() == Superpower.NEUTRAL) {
+		if(this.hasControl() == player || this.hasControl() == Types.Superpower.NEUTRAL) {
 			this.changeInfluence(player, value);
 		} else {
 			int spent = 0;
-			while(this.hasControl() != player && this.hasControl() != Superpower.NEUTRAL 
+			while(this.hasControl() != player && this.hasControl() != Types.Superpower.NEUTRAL 
 					&& spent < value) {
 				this.changeInfluence(player, 1);
 				spent += 2;
@@ -72,11 +72,11 @@ public class Country {
 	}
 	
 	/**
-	 * Increases a superpower's influence in the country.
-	 * @param player representation of which superpower is adding influence
+	 * Increases a Types.Superpower's influence in the country.
+	 * @param player representation of which Types.Superpower is adding influence
 	 * @param value number of points being spent to increase influence
 	 */
-	public void changeInfluence(Superpower player, int value) {
+	public void changeInfluence(Types.Superpower player, int value) {
 		int side = player.getValue();
 		this.influence[side] += value;
 	}

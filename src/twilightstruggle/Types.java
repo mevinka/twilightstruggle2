@@ -1,0 +1,134 @@
+package twilightstruggle;
+
+public class Types {
+	public enum Superpower {
+		USA(0), USSR(1), NEUTRAL(-1);
+		
+		private int value;
+		
+		private Superpower(int value) {
+			this.value = value;
+		}
+		
+		public int getValue() {
+			return this.value;
+		}
+	}
+	
+	public enum WarPhase {
+		EARLY, MID, LATE;
+	}
+	
+	public enum Card {
+		SCORE_ASIA, // start early war cards
+		SCORE_EURO,
+		SCORE_MIDEAST,
+		DUCK_COVER,
+		FIVE_YR_PLAN,
+		CHINA_CARD,
+		SOCIALIST_GOVTS,
+		FIDEL,
+		VIET_REVOLTS,
+		BLOCKADE,
+		WAR_KOREAN,
+		ROMANIAN_ABDIC,
+		WAR_ARABISRAEL,
+		COMECON,
+		NASSER,
+		WARSAW_PACT,
+		DEGAULLE,
+		NAZI_SCIENTIST,
+		TRUMAN_DOCTRINE,
+		OLYMPICS,
+		NATO,
+		IND_REDS,
+		MARSHALL_PLAN,
+		WAR_INDOPAK,
+		CONTAINMENT,
+		CIA,
+		USJAPAN_PACT,
+		SUEZ_CRISIS,
+		EEURO_UNREST,
+		DECOLONIZATION,
+		RED_SCAREPURGE,
+		UN_INTERVENTION,
+		DE_STALIN,
+		NUCLEAR_TESTBAN,
+		FORMOSAN, // end Early war cards
+		WAR_BRUSH, // start Mid war cards
+		SCORE_CAMERICA,
+		SCORE_SEASIA,
+		ARMS_RACE,
+		CUBAN_MISSILE,
+		NUCLEAR_SUBS,
+		QUAGMIRE,
+		SALT_NEGOTNS,
+		BEAR_TRAP,
+		SUMMIT,
+		STOP_WORRYING,
+		JUNTA,
+		KITCHEN_DEBATES,
+		MISSILE_ENVY,
+		WE_BURY_YOU,
+		BREZHNEV_DOCTRINE,
+		PORTUGUESE_CRUMB,
+		SAFRICA_UNREST,
+		ALLENDE,
+		WILLY_BRANDT,
+		MUSLIM_REVOLUTION,
+		ABM_TREATY,
+		CULTURAL_REV,
+		FLOWER_PWR,
+		U2_INCIDENT,
+		OPEC,
+		LONE_GUNMAN,
+		COLONIAL_REAR,
+		PANAMA_RETURN,
+		CAMP_DAVID,
+		PUPPET_GOVS,
+		GRAIN_TO_SOVS,
+		JOHN_PAUL,
+		LATIN_DEATHSQUADS,
+		OAS_FOUNDED,
+		NIXON_CHINA,
+		SADAT_EXPELS,
+		SHUTTLE_DIPLO,
+		VOICE_OF_USA,
+		LIBERATION_THEO,
+		USSURI_SKIRMISH,
+		ASK_NOT,
+		ALLIANCE_FOR_PROG,
+		SCORE_AFRICA,
+		ONE_SMALL_STEP,
+		SCORE_SAMERICA, // end Mid war cards
+		IRANIAN_HOSTAGE, // start Late war cards
+		IRON_LADY,
+		REAGAN_LIBYA,
+		STAR_WARS,
+		NSEA_OIL,
+		REFORMER,
+		MARINE_BARRACKS,
+		SOVIETS_KAL,
+		GLASNOST,
+		ORTEGA_NICAR,
+		TERRORISM,
+		IRAN_CONTRA,
+		CHERNOBYL,
+		LATIN_DEBT,
+		TEAR_DOWN_WALL,
+		EVIL_EMPIRE,
+		ALDRICH_AMES,
+		PERSHING_II,
+		WARGAMES,
+		SOLIDARITY,
+		WAR_IRAQIRAN, // end Late war cards
+		DEFECTORS, // random early war card in order...
+		CAMBRIDGE_FIVE, // optional cards
+		SPECIAL_RELTN,
+		NORAD,
+		CHE,
+		MAN_IN_TEHRAN,
+		YURI_SAMANTHA,
+		AWACS; // end optional cards
+	}
+}
