@@ -1,5 +1,7 @@
 package twilightstruggle;
 
+import java.util.Stack;
+
 /**
  * A class representing an individual country in Twilight Struggle. The only
  * basic operation provided is the manipulation of a country's influence.
@@ -9,23 +11,26 @@ package twilightstruggle;
  * @author Kevin
  */
 public class Country {
-	private boolean battleground;
-	private String name;
+	public final boolean battleground;
+	public final String name;
 	private int stability;
 	private int[] influence;
+	public final Stack<Country> neighbors;
 	
 	/**
 	 * Country constructor. Defaults influence in the country to zero.
 	 * @param name The name of the country
 	 * @param stability The country's stability number (used in most operations)
 	 * @param battleground The battleground status of the country
+	 * @param neighbors The neighboring adjacent countries to this particular country
 	 */
-	public Country(String name, int stability, boolean battleground) {
+	public Country(String name, int stability, boolean battleground, Stack<Country> neighbors) {
 		this.battleground = battleground;
 		this.name = name;
 		this.stability = stability;
 		this.influence = new int[2];
 		influence[0] = influence[1] = 0; // Index 0 represents USA, 1 USSR
+		this.neighbors = neighbors;
 	}
 	
 	/**

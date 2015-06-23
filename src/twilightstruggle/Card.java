@@ -9,7 +9,7 @@ package twilightstruggle;
  * @author Kevin
  */
 
-public abstract class Card implements Comparable<Card> {
+public class Card implements Comparable<Card> {
 	public final String name;
 	public final String description;
 	public final Types.Card cardInt;
@@ -17,7 +17,18 @@ public abstract class Card implements Comparable<Card> {
 	public final Types.WarPhase phase;
 	public final Types.Superpower powerType;
 	public final boolean discardable;
+	// NEED effect type stack/array/whatever
 	
+	/**
+	 * Constructs a card object, representing one of the many unique cards in TS
+	 * @param name The name of the card
+	 * @param description Text of the card's body
+	 * @param cardInt The number of the card in the TS card index
+	 * @param cost The operations point cost value of the card
+	 * @param phase The phase of the Cold War the card is part of (early, mid, or late war)
+	 * @param power The superpower alignment of the card (can be neutral)
+	 * @param discardable If the card is discarded after use, this value is TRUE. Otherwise, it is FALSE.
+	 */
 	public Card(String name, String description, Types.Card cardInt, int cost, 
 			Types.WarPhase phase, Types.Superpower power, boolean discardable) {
 		this.name = name;
@@ -49,6 +60,4 @@ public abstract class Card implements Comparable<Card> {
 		
 		return 0;
 	}
-	
-	abstract void effect();
 }

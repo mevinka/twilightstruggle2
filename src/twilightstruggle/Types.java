@@ -1,6 +1,18 @@
 package twilightstruggle;
 
+/**
+ * A class of all of the various types in Twilight Struggle.
+ * @author Kevin
+ *
+ */
+
 public class Types {
+	
+	/**
+	 * The enumeration for the superpowers in the game. Note that neutral is a value of -1.
+	 * @author Kevin
+	 *
+	 */
 	public enum Superpower {
 		USA(0), USSR(1), NEUTRAL(-1);
 		
@@ -15,10 +27,37 @@ public class Types {
 		}
 	}
 	
+	/**
+	 * Phases of the war in the game
+	 * @author Kevin
+	 *
+	 */
 	public enum WarPhase {
 		EARLY, MID, LATE;
 	}
 	
+	/**
+	 * A list of all of the regions on the world map, INCLUDING sub regions
+	 * @author Kevin
+	 *
+	 */
+	public enum Region {
+		EUROPE, // used only for the countries in both parts of Europe
+		E_EUROPE,
+		W_EUROPE,
+		ASIA, // if country is in ASIA but not a part of SE_ASIA
+		SE_ASIA, // for only countries in SE_ASIA
+		C_AMERICA,
+		S_AMERICA,
+		AFRICA,
+		MIDDLE_EAST
+	}
+	
+	/**
+	 * A list encoding every single card, in index order, in Twilight Struggle
+	 * @author Kevin
+	 *
+	 */
 	public enum Card {
 		SCORE_ASIA, // start early war cards
 		SCORE_EURO,
