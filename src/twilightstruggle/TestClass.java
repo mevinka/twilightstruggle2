@@ -15,13 +15,26 @@ public class TestClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Board board = new Board();
+		Player usa = new Player(Types.Superpower.USA);
+		Player ussr = new Player(Types.Superpower.USSR);
+		
+		
 		
 		initializeCountries();
 		initializeRegions();
-		
+		// initialize cards
+		initializeCards();
 	}
 
-	private void initializeCountries() {
+	private static void initializeCountries() {
 		// TODO: initialize each of the countries with all of its neighbors.
+	}
+	
+	private static void initializeRegions() {
+		
+	}
+	
+	private static void initializeCards() {
+		
 	}
 }

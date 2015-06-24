@@ -170,4 +170,6 @@ public class Types {
 		YURI_SAMANTHA,
 		AWACS; // end optional cards
 	}
+	
+	
 }
