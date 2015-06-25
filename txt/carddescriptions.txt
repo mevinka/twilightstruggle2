@@ -1,0 +1,17 @@
+Asia Scoring,Presence: 3; Domination: 7; Control: 9; +1 VP per controlled Battleground country in region; +1 VP per country controlled that is adjacent to enemy superpower; MAY NOT BE HELD!,0,N,F
+Europe Scoring,Presence: 3; Domination: 7; Control: Automatic Victory; +1 VP per controlled Battleground country in Region; +1 VP per country controlled that is adjacent to enemy superpower; MAY NOT BE HELD!,0,N,F
+Middle East Scoring,Presence: 3; Domination: 5; Control: 7; +1 VP per controlled Battleground country in Region; MAY NOT BE HELD!,0,N,F
+Duck and Cover,Degrade the DEFCON level by 1. The US receives VP equal to 5 minus the current DEFCON level.,3,U,F
+Five Year Plan,The USSR must randomly discard a card. If the card has a US associated Event, the Event occurs immediately. If the card has a USSR associated Event or an Event applicable to both players, then the card must be discarded without triggering the Event.,3,U,F
+The China Card,This card begins the game with the USSR. When played, the player receives +1 Operations to the Operations value of this card if it uses all its Operations in Asia. It is passed to the opponent once played. A player receives 1 VP for holding this card at the end of Turn 10.,4,N,F
+Socialist Governments,Remove a total of 3 US Influence from any countries in Western Europe (removing no more than 2 Influence per country). This Event cannot be used after the “#83 – The Iron Lady” Event has been played.,3,S,F
+Fidel*,Remove all US Influence from Cuba. USSR adds sufficient Influence in Cuba for Control.,2,S,T
+Vietnam Revolts*,Add 2 USSR Influence to Vietnam. For the remainder of the turn, the USSR receives +1 Operations to the Operations value of a card that uses all its Operations in Southeast Asia.,2,S,T
+Blockade*,Unless the US immediately discards a card with an Operations value of 3 or more, remove all US Influence from West Germany.,1,S,T
+Korean War*,North Korea invades South Korea. Roll a die and subtract (-1) from the die roll for every US controlled country adjacent to South Korea. On a modified die roll of 4-6, the USSR receives 2 VP and replaces all US Influence in South Korea with USSR Influence. The USSR adds 2 to its Military Operations Track.,2,S,F
+Romanian Abdication*,Remove all US Influence from Romania. The USSR adds sufficient Influence to Romania for Control.,1,S,T
+Arab-Israeli War,Pan-Arab Coalition invades Israel. Roll a die and subtract (-1) from the die roll for Israel, if it is US controlled, and for every US controlled country adjacent to Israel. On a modified die roll of 4-6, the USSR receives 2 VP and replaces all US Influence in Israel with USSR Influence. The USSR adds 2 to its Military Operations Track. This Event cannot be used after the “#65 – Camp David Accords” Event has been played.,2,S,F
+Comecon*,Add 1 USSR Influence to each of 4 non-US controlled countries of Eastern Europe.,3,S,T
+Nasser*,Add 2 USSR Influence to Egypt. The US removes half, rounded up, of its Influence from Egypt.,1,S,T
+Warsaw Pact Formed*,Remove all US influence from 4 countries in Eastern Europe or add 5 USSR Influence to any countries in Eastern Europe (adding no more than 2 Influence per country). This Event allows the “#21 – NATO” card to be played as an Event.,3,S,T
+De Gaulle Leads France*,Remove 2 US Influence from France and add 1 USSR Influence to France. This Event cancels the effect(s) of the “#21 – NATO” Event for France only.,3,S,T

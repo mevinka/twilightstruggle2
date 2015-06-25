@@ -171,5 +171,108 @@ public class Types {
 		AWACS; // end optional cards
 	}
 	
-	
+	/**
+	 * Enumeration of all the countries on the map, in region order.
+	 * Superpowers:     0-1
+	 * Central America: 2-11
+	 * South America:   12-21
+	 * Western Europe:  22-33
+	 * Eastern Europe:  34-40
+	 * Neutral Europe:  41-42
+	 * Middle East:     43-52
+	 * Africa:          53-70
+	 * Asia:            71-79
+	 * Southeast Asia:  80-86
+	 * @author Kevin
+	 *
+	 */
+	public enum Country {
+		USA,			// SUPERPOWER "COUNTRY" FOR ADJACENCY
+		USSR,			// SUPERPOWER "COUNTRY" FOR ADJACENCY
+		MEXICO,			// BEGIN C AMERICA
+		GUATEMALA,
+		CUBA,
+		HAITI,
+		DOMINICAN_REP,
+		EL_SALVADOR,
+		HOUNDURAS,
+		NICARAGUA,
+		COSTA_RICA,
+		PANAMA,			// END C AMERICA
+		VENEZUELA,		// BEGIN S AMERICA
+		COLOMBIA,
+		ECUADOR,
+		BRAZIL,
+		PERU,
+		BOLIVIA,
+		CHILE,
+		PARAGUAY,
+		URUGUAY,
+		ARGENTINA,		// END S AMERICA
+		CANADA,			// BEGIN W EUROPE
+		UK,
+		BENELUX,
+		FRANCE,
+		SPAIN_PORTGL,
+		NORWAY,
+		DENMARK,
+		ITALY,
+		GREECE,
+		TURKEY,
+		SWEDEN,
+		GERMANY_W,		// END W EUROPE
+		GERMANY_E,		// BEGIN E EUROPE
+		POLAND,
+		CZECHOSL,
+		HUNGARY,
+		ROMANIA,
+		YUGOSLAV,
+		BULGARIA,		// END E EUROPE
+		FINLAND,		// NEUTRAL EUROPE
+		AUSTRIA,		// NEUTRAL EUROPE
+		LEBANON,		// BEGIN MID EAST
+		SYRIA,
+		ISRAEL,
+		IRAQ,
+		IRAN,
+		LIBYA,
+		EGYPT,
+		JORDAN,
+		GULF_STATES,
+		SAUDI_ARABIA,	// END MID EAST
+		TUNISIA,		// BEGIN AFRICA
+		ALGERIA,
+		MOROCCO,
+		WEST_AFRICA,
+		SAHARAN_STATES,
+		IVORY_COAST,
+		NIGERIA,
+		CAMEROON,
+		ZAIRE,
+		ANGOLA,
+		ZIMBABWE,
+		BOTSWANA,
+		S_AFRICA,
+		SE_AFRICA,
+		KENYA,
+		ETHIOPIA,
+		SOMALIA,
+		SUDAN,			// END AFRICA
+		AFGHANISTAN,	// BEGIN ASIA
+		PAKISTAN,
+		INDIA,
+		TAIWAN,
+		JAPAN,
+		SOUTH_KOREA,
+		NORTH_KOREA,
+		AUSTRALIA,
+		CHINA_CIVILWAR, // END ASIA
+		BURMA,			// BEGIN SE ASIA
+		LAOS_CAMBODIA,
+		THAILAND,
+		VIETNAM,
+		MALAYSIA,
+		INDONESIA,
+		PHILLIPINES		// END SE ASIA
+	}
 }

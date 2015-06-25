@@ -1,6 +1,9 @@
 package twilightstruggle;
 
+import java.util.HashMap;
 import java.util.Stack;
+
+import twilightstruggle.Types.Country;
 
 /**
  * A class representing the players in the game of Twilight Struggle. It includes
@@ -19,6 +22,7 @@ public class Player {
 	private int handSize;
 	private int militaryOps;
 	private int spaceRace;
+	private Stack<Types.Country> influenceList;
 	
 	/**
 	 * The basic player constructor. Defaults to starting game limitations (8 cards in hand, 0 military ops and space race)
@@ -31,6 +35,7 @@ public class Player {
 		setHandSize(8);
 		setMilitaryOps(0);
 		setSpaceRace(0);
+		influenceList = new Stack<Types.Country>();
 	}
 	
 	/**
@@ -72,6 +77,18 @@ public class Player {
 		
 		return null;
 	}
+	
+	public void addCountry(Types.Country country) {
+		if(!influenceList.contains(country)) {
+			influenceList.add(country);
+		}
+	}
+	
+	public void removeCountry(Types.Country country) {
+		if(influenceList.contains(country)) {
+			influenceList.remove(country);
+		}
+	}
 
 	/**
 	 * Space race getter method
@@ -111,5 +128,13 @@ public class Player {
 	 */
 	public Stack<Types.Card> cardsInHand() {
 		return hand;
+	}
+
+	public Stack<Types.Country> getInfluenceList() {
+		return influenceList;
+	}
+
+	public void setInfluenceList(Stack<Types.Country> influenceList) {
+		this.influenceList = influenceList;
 	}
 }

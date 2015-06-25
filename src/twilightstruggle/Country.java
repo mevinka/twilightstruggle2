@@ -11,11 +11,12 @@ import java.util.Stack;
  * @author Kevin
  */
 public class Country {
+	public final Types.Country code;
 	public final boolean battleground;
 	public final String name;
 	private int stability;
 	private int[] influence;
-	public final Stack<Country> neighbors; // TODO change this to Types.Country after making a types.country
+	public final Stack<Types.Country> neighbors; // TODO change this to Types.Country after making a types.country
 	
 	/**
 	 * Country constructor. Defaults influence in the country to zero.
@@ -24,9 +25,10 @@ public class Country {
 	 * @param battleground The battleground status of the country
 	 * @param neighbors The neighboring adjacent countries to this particular country
 	 */
-	public Country(String name, int stability, boolean battleground, Stack<Country> neighbors) {
+	public Country(Types.Country code, String name, int stability, boolean battleground, Stack<Types.Country> neighbors) {
 		this.battleground = battleground;
 		this.name = name;
+		this.code = code;
 		this.stability = stability;
 		this.influence = new int[2];
 		influence[0] = influence[1] = 0; // Index 0 represents USA, 1 USSR
@@ -84,6 +86,15 @@ public class Country {
 	public void changeInfluence(Types.Superpower player, int value) {
 		int side = player.getValue();
 		this.influence[side] += value;
+	}
+	
+	public String toString() {
+		String result = this.name + " || " + this.stability + " || ";
+		if(this.battleground) {
+			result += "BATTLEGROUND";
+		}
+		
+		return result;
 	}
 	
 	
