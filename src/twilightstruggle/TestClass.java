@@ -21,26 +21,26 @@ public class TestClass {
 	public static SubRegion seAsia;
 	public static SubRegion eEurope;
 	public static SubRegion wEurope;
-	public static Stack<Country> countries;
-	
+//	public static Stack<Country> countries;
+	public static Country[] countries;
+	public static final int NO_OF_COUNTRIES = 84;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Board board = new Board();
 		Player usa = new Player(Types.Superpower.USA);
 		Player ussr = new Player(Types.Superpower.USSR);
+		countries = new Country[NO_OF_COUNTRIES];
 		
 		
-		
-		countries = initializeCountries();
+		initializeCountries();
 		initializeRegions();
 		// initialize cards
 		initializeCards();
 	}
 
-	private static Stack<Country> initializeCountries() {
+	private static void initializeCountries() {
 		// TODO: initialize each of the countries with all of its neighbors.
-		Stack<Country> result = new Stack<Country>();
 		
 		// TODO: read from text file, for each line, build stack of Type.Country codes of neighbors
 		
@@ -48,6 +48,7 @@ public class TestClass {
 		Charset charset = Charset.forName("US-ASCII");
 		try (BufferedReader reader = Files.newBufferedReader(path, charset)) {
 		    String line = null;
+		    int counter = 0;
 		    while ((line = reader.readLine()) != null) {
 		        String[] parts = line.split(",");
 		        Types.Country key = Types.Country.valueOf(parts[0]);
@@ -64,7 +65,8 @@ public class TestClass {
 		        
 		        Country c = new Country(key,name,stability,battleground,neighbors);
 		        //System.out.println(c.toString());
-		        result.add(c);
+		        countries[counter] = c;
+		        counter++;
 		        
 		    }
 		} catch (IOException x) {
@@ -74,8 +76,24 @@ public class TestClass {
 		return result;
 	}
 	
+	/**
+	 * Enumeration of all the countries on the map, in region order.
+	 * Superpowers:     0-1
+	 * Central America: 2-11
+	 * South America:   12-21
+	 * Western Europe:  22-33
+	 * Eastern Europe:  34-40
+	 * Neutral Europe:  41-42
+	 * Middle East:     43-52
+	 * Africa:          53-70
+	 * Asia:            71-79
+	 * Southeast Asia:  80-86
+	 */
 	private static void initializeRegions() {
-		
+		// Central America
+		for(int i = 0; i < Types.Region.length; i++) {
+			
+		}
 	}
 	
 	private static void initializeCards() {
