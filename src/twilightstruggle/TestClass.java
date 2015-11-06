@@ -73,7 +73,7 @@ public class TestClass {
 		    System.err.format("IOException: %s%n", x);
 		}
 		
-		return result;
+//		return result;
 	}
 	
 	/**
@@ -91,9 +91,9 @@ public class TestClass {
 	 */
 	private static void initializeRegions() {
 		// Central America
-		for(int i = 0; i < Types.Region.length; i++) {
-			
-		}
+//		for(int i = 0; i < Types.Region.values().length; i++) {
+//			
+//		}
 	}
 	
 	private static void initializeCards() {
